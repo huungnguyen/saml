@@ -1,5 +1,5 @@
 {
-  "name": "Sotatek-HungNguyenThanh/saml",
+  "name": "hungnguyenthanh/saml",
   "description": "A Laravel package for Saml2 integration as a SP (service provider) based on OneLogin toolkit",
   "keywords": ["laravel","saml","singer sign on", "onelogin"],
   "homepage": "https://github.com/Sotatek-HungNguyenThanh/saml.git",
