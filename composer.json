@@ -1,0 +1,25 @@
+{
+  "name": "huungnguyen/saml",
+  "description": "A Laravel package for Saml2 integration as a SP (service provider) based on OneLogin toolkit",
+  "keywords": ["laravel","saml","singer sign on", "onelogin"],
+  "homepage": "https://github.com/Sotatek-HungNguyenThanh/saml.git",
+  "license": "MIT",
+  "version": "0.8.1",
+  "authors": [
+    {
+      "name": "huungnguyen",
+      "email": "hung.nguyen.thanh@sotatek.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": ">=5.0.0",
+    "onelogin/php-saml": "^2.10"
+  },
+  "autoload": {
+    "psr-0": {
+      "Hungnguyen\\Saml\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
