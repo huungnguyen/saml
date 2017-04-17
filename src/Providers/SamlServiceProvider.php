@@ -1,5 +1,5 @@
 <?php
-namespace Hungnguyen\Saml\Providers;
+namespace HungNguyenThanh\Saml\Providers;
 use OneLogin_Saml2_Auth;
 use URL;
 use Illuminate\Support\ServiceProvider;

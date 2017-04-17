@@ -1,5 +1,5 @@
 <?php
-namespace Hungnguyen\Saml\Events;
+namespace HungNguyenThanh\Saml\Events;
 class SamlLoginEvent {
     protected $user;
     function __construct($user)

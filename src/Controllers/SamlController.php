@@ -1,8 +1,8 @@
 <?php
-namespace Hungnguyen\Saml\Controllers;
-use Hungnguyen\Saml\Events\SamlLoginEvent;
-use Hungnguyen\Saml\Auth;
-use Hungnguyen\Saml\SamlAuth;
+namespace HungNguyenThanh\Saml\Controllers;
+use HungNguyenThanh\Saml\Events\SamlLoginEvent;
+use HungNguyenThanh\Saml\Auth;
+use HungNguyenThanh\Saml\SamlAuth;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 class SamlController extends Controller

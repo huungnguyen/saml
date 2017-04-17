@@ -1,4 +1,4 @@
 <?php
-namespace Hungnguyen\Saml\Events;
+namespace HungNguyenThanh\Saml\Events;
 class SamlLogoutEvent {
 }

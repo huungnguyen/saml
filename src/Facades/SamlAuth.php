@@ -1,5 +1,5 @@
 <?php
-namespace Hungnguyen\Saml\Facades;
+namespace HungNguyenThanh\Saml\Facades;
 use Illuminate\Support\Facades\Facade;
 class SamlAuth extends Facade
 {
