@@ -4,7 +4,6 @@
   "keywords": ["laravel","saml","singer sign on", "onelogin"],
   "homepage": "https://github.com/Sotatek-HungNguyenThanh/saml.git",
   "license": "MIT",
-  "version": "0.8.1",
   "authors": [
     {
       "name": "Sotatek-HungNguyenThanh",
