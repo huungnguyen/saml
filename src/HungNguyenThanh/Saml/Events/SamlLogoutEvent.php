@@ -1,4 +1,13 @@
 <?php
 namespace HungNguyenThanh\Saml\Events;
-class SamlLogoutEvent {
+use App\Events\Event;
+use Illuminate\Queue\SerializesModels;
+
+class SamlLogoutEvent extends Event {
+    use SerializesModels;
+
+    public function __construct()
+    {
+
+    }
 }

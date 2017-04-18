@@ -1,8 +1,10 @@
 <?php
 namespace HungNguyenThanh\Saml\Events;
-class SamlLoginEvent {
+use HungNguyenThanh\Saml\SamlUser;
+
+class SamlLoginEvent{
     protected $user;
-    function __construct($user)
+    function __construct(SamlUser $user)
     {
         $this->user = $user;
     }

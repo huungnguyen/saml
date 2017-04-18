@@ -1,10 +1,10 @@
 <?php
 namespace HungNguyenThanh\Saml\Facades;
 use Illuminate\Support\Facades\Facade;
-class SamlAuth extends Facade
+class Auth extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'SamlAuth';
+        return 'HungNguyenThanh\Saml\SamlAuth';
     }
 } 

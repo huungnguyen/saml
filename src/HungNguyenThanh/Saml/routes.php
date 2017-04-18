@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: hungnguyen
- * Date: 17/04/2017
- * Time: 17:27
- */
+
 Route::group([
     'prefix' => config('saml.routesPrefix'),
     'middleware' => config('saml.routesMiddleware')
@@ -32,8 +27,4 @@ Route::group([
         'as' => 'saml_sls',
         'uses' => 'HungNguyenThanh\Saml\Controllers\SamlController@sls',
     ));
-
-    Route::get('/test', function (){
-        return 'test';
-    });
 });

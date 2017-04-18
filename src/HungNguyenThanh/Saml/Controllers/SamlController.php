@@ -1,7 +1,6 @@
 <?php
 namespace HungNguyenThanh\Saml\Controllers;
 use HungNguyenThanh\Saml\Events\SamlLoginEvent;
-use HungNguyenThanh\Saml\Facades\SamlAuth;
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -9,10 +8,8 @@ use Illuminate\Support\Facades\Log;
 class SamlController extends Controller
 {
     protected $samlAuth;
-    /**
-     * @param Saml2Auth $saml2Auth injected.
-     */
-    function __construct(SamlAuth $samlAuth)
+
+    function __construct(\HungNguyenThanh\Saml\SamlAuth $samlAuth)
     {
         $this->samlAuth = $samlAuth;
     }
@@ -31,13 +28,10 @@ class SamlController extends Controller
      */
     public function acs(Request $request)
     {
-        Log::info($request->all());
         $errors = $this->samlAuth->acs();
         if (!empty($errors)) {
             logger()->error('Saml2 error_detail', ['error' => $this->samlAuth->getLastErrorReason()]);
-            session()->flash('saml2_error_detail', [$this->samlAuth->getLastErrorReason()]);
             logger()->error('Saml2 error', $errors);
-            session()->flash('saml2_error', $errors);
             return redirect(config('saml.errorRoute'));
         }
         $user = $this->samlAuth->getSamlUser();
