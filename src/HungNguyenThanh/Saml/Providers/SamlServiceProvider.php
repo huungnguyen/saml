@@ -15,6 +15,12 @@ class SamlServiceProvider extends ServiceProvider
     public function boot()
     {
 
+        $this->publishes([
+            __DIR__.'/../Config/saml.php' => config_path('saml.php'),
+        ]);
+        if (config('saml.proxyVars', false)) {
+            \OneLogin_Saml2_Utils::setProxyVars(true);
+        }
     }
     /**
      * Register the service provider.
@@ -23,7 +29,9 @@ class SamlServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        include __DIR__.'/../routes.php';
+        if(config('saml.useRoutes', false) == true ){
+            include __DIR__.'/../routes.php';
+        }
         $this->app->singleton('HungNguyenThanh\Saml\SamlAuth', function ($app) {
             $config = config('saml');
             if (empty($config['sp']['entityId'])) {
