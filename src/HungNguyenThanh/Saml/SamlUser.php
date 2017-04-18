@@ -1,11 +1,7 @@
 <?php
 namespace HungNguyenThanh\Saml;
 use OneLogin_Saml2_Auth;
-/**
- * A simple class that represents the user that 'came' inside the saml2 assertion
- * Class Saml2User
- * @package Aacotroneo\Saml2
- */
+
 class SamlUser
 {
     protected $auth;

@@ -25,10 +25,7 @@ class SamlAuth
         $auth = $this->auth;
         return $auth->isAuthenticated();
     }
-    /**
-     * The user info from the assertion
-     * @return Saml2User
-     */
+
     function getSamlUser()
     {
         return new SamlUser($this->auth);
